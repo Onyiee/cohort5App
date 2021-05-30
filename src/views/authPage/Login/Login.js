@@ -8,7 +8,7 @@ import {useEffect} from "react"
         username: '',
         password: ''
     }
-    const getData = (key, value)=> {
+    const setData = (key, value)=> {
         data[key] = value
     }
 
@@ -26,16 +26,17 @@ import {useEffect} from "react"
     return (
         <div>
             <h5>Welcome</h5>
+            <form>
             <div className="loginContainer">
-                <Input label="Username" getData={getData} dataKey="username" icon="email" />
-                <Input label="Password" getData={getData} dataKey="password" icon="person" />   
+                <Input label="Username" getData={setData} dataKey="username" icon="email" />
+                <Input label="Password" getData={setData} dataKey="password" icon="person" />   
             </div>
-
+            </form>
             <div className='loginBtn'>
                 <Button color='black' text="login" width="100%" outline={false} action={logData} key="" />
             </div>
-            <form>
-            </form>
+          
+      
        </div>
      
     )

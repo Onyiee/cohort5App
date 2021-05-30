@@ -13,9 +13,7 @@ function App(){
       <Router>
         <Header />
         <Switch>
-          <Route path="/login">
-            <Login/>
-          </Route>
+          <Route path="/login"><Login/></Route>
 
           <Route path="/register"><Register/></Route>
         </Switch>
