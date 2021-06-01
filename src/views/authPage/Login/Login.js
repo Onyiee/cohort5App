@@ -15,13 +15,17 @@ import {useEffect} from "react"
     const logData = ()=> {
         console.log(data)
     }
-    
+    const test =()=> {
+    fetch('http://localhost:5000/users').then((res)=>res.json())
+        .then(data=> console.log(data))
+        .catch(e=>console.log(e))
+    }
     useEffect(() => {
-        console.log("Login: i mounted")
+        test();
         return () => {
             console.log("Login: i unmounted")
         }
-    }, [])
+    },[])
 
     return (
         <div>
